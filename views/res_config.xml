@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="res_config_settings_view_form" model="ir.ui.view">
+     <field name="name">res.config.settings.view.form.inherit.check.pos</field>
+     <field name="model">res.config.settings</field>
+     <field name="priority" eval="15"/>
+     <field name="inherit_id" ref="base.res_config_settings_view_form"/>
+     <field name="arch" type="xml">
+         <xpath expr="//div[hasclass('settings')]" position="inside">
+             <div class="app_settings_block" data-string="Check Field Position" string="Check Field Position" data-key="check_conf_pos">
+                 <h2>Date Field Position</h2>
+                 <div class="row mt16 o_settings_container">
+                     <div class="col-12 col-lg-6 o_setting_box">
+                         <div class="o_setting_left_pane"/>
+                         <div class="o_setting_right_pane">
+                             <span class="o_form_label">Year Date Position</span>
+                             <div class="text-muted content-group mt16">
+                                 <field name="yy_date_pos" class="text-center oe_inline" />
+                             </div>
+                         </div>
+                     </div>
+
+                     <div class="col-12 col-lg-6 o_setting_box">
+                         <div class="o_setting_left_pane"/>
+                         <div class="o_setting_right_pane">
+                             <span class="o_form_label">Month Date Position</span>
+                             <div class="text-muted content-group mt16">
+                                 <field name="mm_date_pos" class="text-center oe_inline" />
+                             </div>
+                         </div>
+                     </div>
+
+                     <div class="col-12 col-lg-6 o_setting_box">
+                         <div class="o_setting_left_pane"/>
+                         <div class="o_setting_right_pane">
+                             <span class="o_form_label">Day Date Position</span>
+                             <div class="text-muted content-group mt16">
+                                 <field name="dd_date_pos" class="text-center oe_inline" />
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+
+
+                 <h2>Payor Position</h2>
+                 <div class="row mt16 o_settings_container">
+                     <div class="col-12 col-lg-6 o_setting_box">
+                         <div class="o_setting_left_pane"/>
+                         <div class="o_setting_right_pane">
+                             <span class="o_form_label">Payor Position</span>
+                             <div class="text-muted content-group mt16">
+                                 <field name="payor_pos" class="text-center oe_inline" />
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+
+                 <h2>Amount Position</h2>
+                 <div class="row mt16 o_settings_container">
+                     <div class="col-12 col-lg-6 o_setting_box">
+                         <div class="o_setting_left_pane"/>
+                         <div class="o_setting_right_pane">
+                             <span class="o_form_label">Number Amount Position</span>
+                             <div class="text-muted content-group mt16">
+                                 <field name="amnt_pos" class="text-center oe_inline" />
+                             </div>
+                         </div>
+                     </div>
+
+                     <div class="col-12 col-lg-6 o_setting_box">
+                         <div class="o_setting_left_pane"/>
+                         <div class="o_setting_right_pane">
+                             <span class="o_form_label">Word Amount Position</span>
+                             <div class="text-muted content-group mt16">
+                                 <field name="amnt_word_pos" class="text-center oe_inline" />
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+         </xpath>
+     </field>
+ </record>
+
+
+
+ <record id="action_check_pos_config" model="ir.actions.act_window">
+        <field name="name">Check Config</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">res.config.settings</field>
+        <field name="view_mode">form</field>
+        <field name="target">inline</field>
+        <field name="context">{'module' : 'check_conf_pos'}</field>
+    </record>
+
+
+
+</odoo>

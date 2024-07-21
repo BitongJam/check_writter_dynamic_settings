@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <menuitem
+        id="check_conf_set_menu"
+        name="Check Position Configuration"
+        action="check_writter_dynamic_settings.action_check_pos_config"
+        parent="account.menu_finance_configuration"
+        sequence="0"/>
+
+</odoo>

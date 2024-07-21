@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+ <!-- Paper format for Check Writer -->
+		<record id="paperformat_check_writer" model="report.paperformat">
+			<field name="name">Check Writer</field>
+            <field name="default" eval="False" />
+            <field name="format">custom</field>
+            <field name="page_height">76</field>
+            <field name="page_width">205</field>
+            <field name="orientation">Portrait</field>
+            <field name="margin_top">7</field>
+            <field name="margin_bottom">0</field>
+            <field name="margin_left">0</field>
+            <field name="margin_right">0</field>
+            <field name="header_line" eval="False" />
+            <field name="header_spacing">40</field>
+            <field name="dpi">96</field>
+		</record>
+     <report
+            id="action_check_writer_report"
+            model="account.payment"
+            string="Check Writer"
+            report_type="qweb-pdf"
+            name="check_writter_dynamic_settings.report_check_writer"
+            file="check_writter_dynamic_settings.report_check_writer"
+            paperformat="check_writter_dynamic_settings.paperformat_check_writer"
+            menu="True"
+        />
+       
+
+</odoo>

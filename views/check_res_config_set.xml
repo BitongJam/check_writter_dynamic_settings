@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="check_config_set_view_form" model="ir.ui.view">
+        <field name="name">check_config_set.view.form</field>
+        <field name="model">res.config.settings</field>
+        <field name="arch" type="xml">
+            <form string="">
+                <sheet>
+                    <group string="Date Field">
+                        <field name="yy_date_pos" />
+                        <field name="mm_date_pos" />
+                        <field name="dd_date_pos" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="check_config_set_action" model="ir.actions.act_window">
+        <field name="name">Check Position</field>
+        <field name="res_model">res.config.settings</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="check_config_set_view_form"/>
+
+        <!-- <field name="domain">[]</field>
+        <field name="context">{}</field> -->
+       
+    </record>
+
+</odoo>
